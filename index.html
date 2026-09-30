@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Student Management</title><link rel="stylesheet" href="style.css">
+</head><body>
+<div class="container">
+<h1>🎓 Student Management System</h1>
+<p class="sub">Spring Boot + JDBC + MySQL</p>
+<section class="card">
+<h2>Student Registration</h2>
+<form id="studentForm">
+<div class="grid">
+<input id="name" placeholder="Student name" required>
+<input id="email" type="email" placeholder="Email" required>
+<input id="phone" placeholder="Phone">
+<input id="course" placeholder="Course">
+</div>
+<button type="submit">Submit Student</button><span id="message"></span>
+</form>
+</section>
+<section class="card">
+<div class="head"><h2>Students from Database</h2><button type="button" onclick="loadStudents()">Refresh</button></div>
+<div class="tableWrap"><table>
+<thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Course</th><th>Created</th><th>Action</th></tr></thead>
+<tbody id="studentTable"></tbody>
+</table></div>
+</section>
+</div>
+<script src="script.js"></script>
+</body></html>
